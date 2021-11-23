@@ -1,0 +1,32 @@
+{
+    "name": "atmaliance/yii2-atm-asset",
+    "description": "ATM Asset backend theme asset bundle for Yii 2.0 Framework based on dmstr/adminlte",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","atm72","asset"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitaliy Popov",
+            "email": "popov.v.o@atm72.ru"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "2.*",
+        "yiisoft/yii2-bootstrap": "~2.0.0"
+    },
+    "suggest": {
+        "cebe/yii2-gravatar": "Display user icons",
+        "rmrevin/yii2-fontawesome": "Font icons"
+    },
+    "autoload": {
+        "psr-4": {
+            "atmaliance\\yii2_atm_asset\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
