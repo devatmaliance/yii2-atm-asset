@@ -7,7 +7,7 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
 
 class AtmAsset extends BaseAdminLteAsset
 {
-    public $sourcePath = '@vendor/devatmaliance/yii2-atm-asset/src/assets';
+    public $sourcePath = '@vendor/atmaliance/yii2-atm-asset/src/assets';
 
     public $css = [
         'css/AdminLTE.css',
