@@ -10,6 +10,7 @@ class AtmAsset extends BaseAdminLteAsset
     public $sourcePath = '@vendor/atmaliance/yii2-atm-asset/src/assets';
 
     public $css = [
+        'css/main.css',
         'css/AdminLTE.css',
     ];
 
