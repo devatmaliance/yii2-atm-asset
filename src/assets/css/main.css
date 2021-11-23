@@ -10,3 +10,12 @@
     filter: alpha(opacity=20);
     opacity: 0.4;
 }
+
+.btn-modal-close:active:focus {
+    color: #333;
+    background-color: unset;
+    border-color: unset;
+    outline: none;
+    outline-offset: unset;
+    -webkit-box-shadow: none;
+}
