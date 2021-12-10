@@ -928,10 +928,12 @@ a:focus {
 .navbar-nav > .notifications-menu > .dropdown-menu,
 .navbar-nav > .messages-menu > .dropdown-menu,
 .navbar-nav > .tasks-menu > .dropdown-menu {
-    width: 280px;
+    width: 350px;
     padding: 0 0 0 0;
     margin: 0;
     top: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0 rgb(0 0 0 / 1%), 0 1px 10px 0 rgb(13 35 67 / 15%);
 }
 .navbar-nav > .notifications-menu > .dropdown-menu > li,
 .navbar-nav > .messages-menu > .dropdown-menu > li,
