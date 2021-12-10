@@ -16,6 +16,7 @@ class AtmAsset extends BaseAdminLteAsset
 
     public $js = [
         'js/adminlte.js',
+        'js/atm72.js',
     ];
 
     public $depends = [
