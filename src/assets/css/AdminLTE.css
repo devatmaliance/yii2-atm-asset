@@ -928,10 +928,12 @@ a:focus {
 .navbar-nav > .notifications-menu > .dropdown-menu,
 .navbar-nav > .messages-menu > .dropdown-menu,
 .navbar-nav > .tasks-menu > .dropdown-menu {
-    width: 280px;
+    width: 350px;
     padding: 0 0 0 0;
     margin: 0;
     top: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0 rgb(0 0 0 / 1%), 0 1px 10px 0 rgb(13 35 67 / 15%);
 }
 .navbar-nav > .notifications-menu > .dropdown-menu > li,
 .navbar-nav > .messages-menu > .dropdown-menu > li,
@@ -941,15 +943,7 @@ a:focus {
 .navbar-nav > .notifications-menu > .dropdown-menu > li.header,
 .navbar-nav > .messages-menu > .dropdown-menu > li.header,
 .navbar-nav > .tasks-menu > .dropdown-menu > li.header {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: #ffffff;
     padding: 7px 10px;
-    border-bottom: 1px solid #f4f4f4;
-    color: #444444;
-    font-size: 14px;
 }
 .navbar-nav > .notifications-menu > .dropdown-menu > li.footer > a,
 .navbar-nav > .messages-menu > .dropdown-menu > li.footer > a,
