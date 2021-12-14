@@ -1,12 +1,13 @@
-$(document).on('select2:open', function () {
+$(document).on('select2:open', function (e) {
     try {
-        let searchInput = $('input.select2-search__field')[0] ?? null;
+        const selectId = e.target.id
+        let searchField = $(".select2-search__field[aria-controls='select2-" + selectId + "-results']")[0];
 
-        if (undefined === searchInput || null === searchInput) {
+        if (searchField === undefined || searchField === null) {
             return;
         }
 
-        searchInput.focus();
+        searchField.focus();
     } catch (error) {
         console.log(error.message);
     }
