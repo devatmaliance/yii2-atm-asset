@@ -2,7 +2,7 @@
 
 namespace atmaliance\yii2_atm_asset\web;
 
-use yii\base\Exception;
+use Exception;
 use yii\web\AssetBundle as BaseAdminLteAsset;
 
 class AtmAsset extends BaseAdminLteAsset
@@ -12,11 +12,14 @@ class AtmAsset extends BaseAdminLteAsset
     public $css = [
         'css/main.css',
         'css/AdminLTE.css',
+        'js/toastr.css',
     ];
 
     public $js = [
         'js/adminlte.js',
         'js/atm72.js',
+        'js/toastr-base.js',
+        'js/toastr-modal-window.js',
     ];
 
     public $depends = [
