@@ -12,7 +12,7 @@ class AtmAsset extends BaseAdminLteAsset
     public $css = [
         'css/main.css',
         'css/AdminLTE.css',
-        'js/toastr.css',
+        'css/toastr.css',
     ];
 
     public $js = [
