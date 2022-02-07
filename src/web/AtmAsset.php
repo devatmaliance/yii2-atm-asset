@@ -4,8 +4,11 @@ namespace atmaliance\yii2_atm_asset\web;
 
 use Exception;
 use yii\web\AssetBundle as BaseAdminLteAsset;
+use yii\bootstrap\BootstrapPluginAsset;
+use yii\bootstrap\BootstrapAsset;
+use yii\web\YiiAsset;
 
-class AtmAsset extends BaseAdminLteAsset
+final class AtmAsset extends BaseAdminLteAsset
 {
     public $sourcePath = '@vendor/atmaliance/yii2-atm-asset/src/assets';
 
@@ -23,17 +26,16 @@ class AtmAsset extends BaseAdminLteAsset
     ];
 
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'yii\bootstrap\BootstrapPluginAsset',
+        YiiAsset::class,
+        BootstrapAsset::class,
+        BootstrapPluginAsset::class,
     ];
 
-    public $skin = '_all-skins';
+    public string $skin = '_all-skins';
 
-    public function init()
+    public function init(): void
     {
-        // Append skin color file if specified
-        if ($this->skin) {
+        if (!empty($this->skin)) {
             if (('_all-skins' !== $this->skin) && (strpos($this->skin, 'skin-') !== 0)) {
                 throw new Exception('Invalid skin specified');
             }
