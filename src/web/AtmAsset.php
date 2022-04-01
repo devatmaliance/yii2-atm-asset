@@ -14,7 +14,6 @@ final class AtmAsset extends BaseAdminLteAsset
     ];
 
     public $js = [
-        'js/adminlte.js',
         'js/atm72.js',
         'js/toastr.min.js',
         'js/toastr-modal-window.js',
