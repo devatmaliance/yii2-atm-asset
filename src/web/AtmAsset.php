@@ -3,6 +3,7 @@
 namespace atmaliance\yii2_atm_asset\web;
 
 use yii\web\AssetBundle as BaseAdminLteAsset;
+use yii\web\JqueryAsset;
 use yii\web\YiiAsset;
 
 final class AtmAsset extends BaseAdminLteAsset
@@ -21,5 +22,6 @@ final class AtmAsset extends BaseAdminLteAsset
 
     public $depends = [
         YiiAsset::class,
+        JqueryAsset::class,
     ];
 }
