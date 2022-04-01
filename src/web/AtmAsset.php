@@ -11,6 +11,7 @@ final class AtmAsset extends BaseAdminLteAsset
 
     public $css = [
         'css/toastr.css',
+        'css/notiflix-3.2.5.min.css',
     ];
 
     public $js = [
