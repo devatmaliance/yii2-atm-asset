@@ -17,6 +17,10 @@ final class AtmAsset extends BaseAdminLteAsset
         'js/atm72.js',
         'js/toastr.min.js',
         'js/toastr-modal-window.js',
+        'js/eventsource.min.js',
+        'js/push.min.js',
+        'js/notiflix-block-aio.js',
+        'js/notiflix-loading-aio.js',
     ];
 
     public $depends = [
