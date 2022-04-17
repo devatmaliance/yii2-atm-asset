@@ -10,6 +10,7 @@ final class AtmAsset extends BaseAdminLteAsset
     public $sourcePath = '@vendor/atmaliance/yii2-atm-asset/src/assets';
 
     public $css = [
+        'css/fontawesome/all.css',
         'css/toastr.css',
         'css/notiflix-3.2.5.min.css',
     ];
