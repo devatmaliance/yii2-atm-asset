@@ -136,7 +136,7 @@ button.toast-close-button {
 }
 
 #toast-container > .toast-warning:before {
-    content: "\f003";
+    content: "\f06a";
 }
 
 #toast-container > .toast-error:before {
@@ -145,12 +145,12 @@ button.toast-close-button {
 }
 
 #toast-container > .toast-info:before {
-    content: "\f005";
+    content: "\f05a";
     color: #64d2ff;
 }
 
 #toast-container > .toast-success:before {
-    content: "\f002";
+    content: "\f058";
     color: #30d158;;
 }
 
