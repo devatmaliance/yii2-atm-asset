@@ -122,7 +122,6 @@ button.toast-close-button {
     pointer-events: auto;
     overflow: hidden;
     margin: 0 0 6px;
-    padding: 15px 15px 15px 50px;
     width: 300px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -164,6 +163,7 @@ button.toast-close-button {
 
 #toast-container > div.rtl {
     direction: rtl;
+    padding: 15px 50px 15px 15px;
     background-position: right 15px center;
 }
 
