@@ -1,5 +1,5 @@
 .toast-title {
-    font-weight: 500
+    font-weight: 600
 }
 
 .toast-message {
@@ -120,7 +120,7 @@ button.toast-close-button {
     border-radius: 5px;
     background-position: 15px center;
     background-repeat: no-repeat;
-    color: #ffffff;
+    color: inherit;
     opacity: 1;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
     filter: alpha(opacity=80)
@@ -171,20 +171,12 @@ button.toast-close-button {
     border-radius: 0.3125rem;
 }
 
-.toast-success {
-    background-color: #30d158;
-}
-
-.toast-error {
-    background-color: #FF3824;
-}
-
-.toast-info {
-    background-color: #64d2ff;
-}
-
+.toast-error,
+.toast-success,
+.toast-info,
 .toast-warning {
-    background-color: #F89406;
+    background-color: #fefefe;
+    box-shadow: 0 4px 12px 0 #0d234308;
 }
 
 .toast-progress {
