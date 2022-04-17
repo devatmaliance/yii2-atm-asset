@@ -1,21 +1,45 @@
 let toastrModalWindow = (function ($) {
     let init = function (settings) {
         $.extend(config, settings || {});
-        setup();
+
+        try {
+            installToastrOptions();
+            showModal();
+        } catch (error) {
+            console.log(error.message);
+        }
     };
 
-    let config = {}
+    let config = {
+        defaultToastrOptions: {
+            'closeButton': false,
+            'debug': false,
+            'newestOnTop': false,
+            'progressBar': false,
+            'positionClass': 'toast-top-right',
+            'preventDuplicates': false,
+            'onclick': null,
+            'showDuration': '300',
+            'hideDuration': '1000',
+            'timeOut': '60000',
+            'extendedTimeOut': '1000',
+            'showEasing': 'swing',
+            'hideEasing': 'linear',
+            'showMethod': 'fadeIn',
+            'hideMethod': 'fadeOut'
+        },
+    }
 
-    let setup = function () {
-        try {
-            if (config.type === undefined || config.type === null || config.message === undefined || config.message === null) {
-                return;
-            }
+    let installToastrOptions = function () {
+        toastr.options = config.toastrOptions ?? config.defaultToastrOptions;
+    }
 
-            toastr[config.type](config.message);
-        } catch (error) {
-            console.log(error);
+    let showModal = function () {
+        if (config.type === undefined || config.type === null || config.message === undefined || config.message === null) {
+            return;
         }
+
+        toastr[config.type](config.message);
     }
 
     return {
