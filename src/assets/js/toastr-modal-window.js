@@ -39,7 +39,26 @@ let toastrModalWindow = (function ($) {
             return;
         }
 
-        toastr[config.type](config.message);
+        toastr[config.type](config.message, getHeader());
+    }
+
+    let getHeader = function () {
+        if (config.type === undefined || config.type === null || config.type === '') {
+            return '';
+        }
+
+        let customHeader = config.header ?? null;
+
+        if (customHeader !== null) {
+            return customHeader;
+        }
+
+        switch (config.type) {
+            case 'error':
+                return 'Ошибка';
+            default:
+                return '';
+        }
     }
 
     return {
