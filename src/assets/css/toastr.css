@@ -137,6 +137,7 @@ button.toast-close-button {
 
 #toast-container > .toast-warning:before {
     content: "\f06a";
+    color: #F89406;
 }
 
 #toast-container > .toast-error:before {
