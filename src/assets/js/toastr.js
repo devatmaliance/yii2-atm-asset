@@ -235,6 +235,8 @@
 
                 personalizeToast();
 
+                wrapTo();
+
                 displayToast();
 
                 handleEvents();
@@ -399,6 +401,10 @@
                         }
                     }
                     return false;
+                }
+
+                function wrapTo() {
+                    $('.toast, ' + '.' + map.iconClass).wrapInner('<div class="toast-body">');
                 }
 
                 function hideToast(override) {
