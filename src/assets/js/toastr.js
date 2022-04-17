@@ -404,7 +404,7 @@
                 }
 
                 function wrapTo() {
-                    $('.toast, ' + '.' + map.iconClass).wrapInner('<div class="toast-body">');
+                    $toastElement.html('<div class="toast-body">'  + $toastElement.html() + '</div>')
                 }
 
                 function hideToast(override) {
