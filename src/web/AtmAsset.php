@@ -13,6 +13,7 @@ final class AtmAsset extends BaseAdminLteAsset
         'css/fontawesome-all.css',
         'css/toastr.css',
         'css/notiflix-3.2.5.min.css',
+        'css/nprogress.css',
     ];
 
     public $js = [
@@ -23,6 +24,7 @@ final class AtmAsset extends BaseAdminLteAsset
         'js/push.min.js',
         'js/notiflix-block-aio.js',
         'js/notiflix-loading-aio.js',
+        'js/nprogress.js',
     ];
 
     public $depends = [
