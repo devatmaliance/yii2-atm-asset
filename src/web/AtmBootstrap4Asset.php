@@ -17,7 +17,7 @@ class AtmBootstrap4Asset extends BaseAdminLteAsset
     ];
 
     public $js = [
-        'js/adminlte4.min.js',
+        'js/adminlte4.js',
     ];
 
     public $depends = [
