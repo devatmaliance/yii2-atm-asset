@@ -40618,26 +40618,6 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
     color: #e9ecef;
 }
 
-#toast-container .toast {
-    background-color: #007bff;
-}
-
-#toast-container .toast-success {
-    background-color: #28a745;
-}
-
-#toast-container .toast-error {
-    background-color: #dc3545;
-}
-
-#toast-container .toast-info {
-    background-color: #17a2b8;
-}
-
-#toast-container .toast-warning {
-    background-color: #ffc107;
-}
-
 .toast-bottom-full-width .toast,
 .toast-top-full-width .toast {
     max-width: inherit;
