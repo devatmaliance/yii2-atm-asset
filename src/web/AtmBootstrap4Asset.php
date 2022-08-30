@@ -12,8 +12,8 @@ class AtmBootstrap4Asset extends BaseAdminLteAsset
     public $sourcePath = '@vendor/atmaliance/yii2-atm-asset/src/assets';
 
     public $css = [
-        'css/bootstrap4-custom.css',
         'css/AdminLTE4.css',
+        'css/bootstrap4-custom.css',
     ];
 
     public $js = [
