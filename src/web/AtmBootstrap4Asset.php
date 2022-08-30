@@ -7,10 +7,6 @@ use yii\web\AssetBundle as BaseAdminLteAsset;
 use yii\web\YiiAsset;
 use yii\bootstrap4\BootstrapPluginAsset;
 
-/**
- * AdminLte AssetBundle
- * @since 0.1
- */
 class AtmBootstrap4Asset extends BaseAdminLteAsset
 {
     public $sourcePath = '@vendor/atmaliance/yii2-atm-asset/src/assets';
