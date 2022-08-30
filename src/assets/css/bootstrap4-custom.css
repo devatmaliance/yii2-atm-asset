@@ -1,0 +1,36 @@
+.bootstrap-dialog .btn-modal-close {
+    border-radius: 0;
+    border: none;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.4;
+}
+
+.btn-modal-close:active:focus {
+    color: #333;
+    background-color: unset;
+    border-color: unset;
+    outline: none;
+    outline-offset: unset;
+    -webkit-box-shadow: none;
+}
+
+.dropdown-menu > li > span {
+    display: block;
+    padding: 3px 20px;
+    color: #777;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+}
+
+.dropdown-menu > li > span:hover {
+    background-color: #e1e3e9;
+    color: #333;
+}
