@@ -25,6 +25,7 @@ final class AtmAsset extends BaseAdminLteAsset
         'js/notiflix-block-aio.js',
         'js/notiflix-loading-aio.js',
         'js/nprogress.js',
+        'js/jquery.ba-throttle-debounce.min',
     ];
 
     public $depends = [
