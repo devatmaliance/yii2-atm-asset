@@ -88,10 +88,16 @@ $(function() {
 
             $(selector.modalWindowContent).append(form);
             $(selector.modalWindow).modal('show');
-        }
-        catch (error) {
-            console.log(error);
-            toastr.error('Не удалось создать модальное окно', 'Ошибка');
+        } catch (error) {
+            let errorMessage = 'Не удалось создать модальное окно';
+
+            try {
+                errorMessage = JSON.parse(error.responseText).message;
+            } catch (error) {
+                console.log(error);
+            }
+
+            toastr.error(errorMessage, 'Ошибка');
             removeModalWindow();
         }
     };
