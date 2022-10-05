@@ -13,6 +13,7 @@ $(function() {
         modalWindow: '#modal-window',
         modalWindowContent: '#modal-window-content',
         modalWindowLink: '.modal-window-link',
+        modalWindowCloseBtn: '#modal-window-close-btn',
     };
 
     let init = function() {
@@ -43,7 +44,7 @@ $(function() {
                 '  <div class="modal-dialog" role="document">' +
                 '    <div class="modal-content">' +
                 '      <div class="modal-header">' +
-                '        <button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                '        <button id="' + selector.modalWindowCloseBtn.substring(1) + '" type="button" class="close" data-dismiss="modal" aria-label="Close">' +
                 '          <span aria-hidden="true">&times;</span>' +
                 '        </button>' +
                 '        <h4 class="modal-title">' + title + '</h4>' +
