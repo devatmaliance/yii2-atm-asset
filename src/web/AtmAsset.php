@@ -17,7 +17,7 @@ final class AtmAsset extends BaseAdminLteAsset
     ];
 
     public $js = [
-        'js/jquery.ba-throttle-debounce.js',
+        'js/atm72.js',
         'js/toastr.js',
         'js/toastr-modal-window.js',
         'js/eventsource.min.js',
@@ -25,7 +25,7 @@ final class AtmAsset extends BaseAdminLteAsset
         'js/notiflix-block-aio.js',
         'js/notiflix-loading-aio.js',
         'js/nprogress.js',
-        'js/atm72.js',
+        'js/jquery.ba-throttle-debounce.js',
         'js/modal-window.js',
     ];
 
