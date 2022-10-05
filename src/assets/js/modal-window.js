@@ -34,7 +34,7 @@ $(function() {
         try {
             let title = $(this).data('modal-title') ?? '';
 
-            if ($('#modal-window').length) {
+            if ($(selector.modalWindow).length) {
                 return;
             }
 
