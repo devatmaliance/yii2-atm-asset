@@ -11,7 +11,10 @@ $(function() {
     let selector = {
         body: 'body',
         modalWindow: '#modal-window',
+        modelWindowHeader: '#modal-window-header',
+        modelWindowTitle: '#modal-window-title',
         modalWindowContent: '#modal-window-content',
+        modalWindowBody: '#modal-window-body',
         modalWindowLink: '.modal-window-link',
         modalWindowCloseBtn: '#modal-window-close-btn',
     };
@@ -33,8 +36,6 @@ $(function() {
 
     let createModalWindow = function() {
         try {
-            let title = $(this).data('modal-title') ?? '';
-
             if ($(selector.modalWindow).length) {
                 return;
             }
@@ -42,14 +43,14 @@ $(function() {
             let modalForm =
                 '<div id="' + selector.modalWindow.substring(1) + '" class="modal fade" tabindex="-1" role="dialog">' +
                 '  <div class="modal-dialog" role="document">' +
-                '    <div class="modal-content">' +
-                '      <div class="modal-header">' +
+                '    <div id="' + selector.modalWindowContent.substring(1) + '" class="modal-content">' +
+                '      <div id="' + selector.modelWindowHeader.substring(1) + '" class="modal-header">' +
                 '        <button id="' + selector.modalWindowCloseBtn.substring(1) + '" type="button" class="close" data-dismiss="modal" aria-label="Close">' +
                 '          <span aria-hidden="true">&times;</span>' +
                 '        </button>' +
-                '        <h4 class="modal-title">' + title + '</h4>' +
+                '        <h4 id="' + selector.modelWindowTitle.substring(1) + '" class="modal-title">' + ($(this).data('modal-title') ?? '') + '</h4>' +
                 '      </div>' +
-                '      <div id="' + selector.modalWindowContent.substring(1) + '" class="modal-body">' +
+                '      <div id="' + selector.modalWindowBody.substring(1) + '" class="modal-body">' +
                 '      </div>' +
                 '    </div>' +
                 '  </div>' +
@@ -87,7 +88,7 @@ $(function() {
                 data: $(this).data('modal-attributes') ?? {},
             });
 
-            $(selector.modalWindowContent).append(form);
+            $(selector.modalWindowBody).append(form);
             $(selector.modalWindow).modal('show');
         } catch (error) {
             let errorMessage = 'Не удалось создать модальное окно';
