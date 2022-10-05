@@ -30,7 +30,7 @@ $(function() {
 
     let setup = function() {
         $(document).on(event.click, selector.modalWindowLink, createModalWindow);
-        $(document).on(event.click, selector.modalWindowLink, showModalWindow);
+        $(document).on(event.click, selector.modalWindowLink, $.throttle(2000, showModalWindow));
         $(document).on(event.hideBsModal, selector.modalWindow, removeModalWindow);
     };
 
@@ -88,6 +88,7 @@ $(function() {
                 data: $(this).data('modal-attributes') ?? {},
             });
 
+            $(selector.modalWindowBody).empty();
             $(selector.modalWindowBody).append(form);
             $(selector.modalWindow).modal('show');
         } catch (error) {
