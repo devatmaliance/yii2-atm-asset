@@ -9,6 +9,7 @@ $(function() {
     };
 
     let selector = {
+        body: 'body',
         modalWindow: '#modal-window',
         modalWindowContent: '#modal-window-content',
         modalWindowLink: '.modal-window-link',
@@ -20,7 +21,6 @@ $(function() {
     };
 
     let unbindEvents = function() {
-        /* Отвязываем все события привязанные к данному пространству имён, дабы избежать повторной инициализации */
         $(document).off('.' + config.namespace);
     };
 
@@ -39,7 +39,7 @@ $(function() {
             }
 
             let modalForm =
-                '<div id="modal-window" class="modal fade" tabindex="-1" role="dialog">' +
+                '<div id="' + selector.modalWindow.substring(1) + '" class="modal fade" tabindex="-1" role="dialog">' +
                 '  <div class="modal-dialog" role="document">' +
                 '    <div class="modal-content">' +
                 '      <div class="modal-header">' +
@@ -48,13 +48,13 @@ $(function() {
                 '        </button>' +
                 '        <h4 class="modal-title">' + title + '</h4>' +
                 '      </div>' +
-                '      <div id="modal-window-content" class="modal-body">' +
+                '      <div id="' + selector.modalWindowContent.substring(1) + '" class="modal-body">' +
                 '      </div>' +
                 '    </div>' +
                 '  </div>' +
                 '</div>';
 
-            $('body').append(modalForm);
+            $(selector.body).append(modalForm);
         } catch (error) {
             console.log(error);
             console.log('Не удалось создать модальное окно');
