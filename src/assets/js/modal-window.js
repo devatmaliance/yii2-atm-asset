@@ -62,8 +62,14 @@ $(function() {
     };
 
     let removeModalWindow = function() {
+        let modalWindow = $(selector.modalWindow) ?? null;
+
+        if (null === modalWindow) {
+            return;
+        }
+
         setTimeout(function() {
-            $(selector.modalWindow).remove();
+            modalWindow.remove();
         }, 200);
     };
 
@@ -86,6 +92,7 @@ $(function() {
         catch (error) {
             console.log(error);
             toastr.error('Не удалось создать модальное окно', 'Ошибка');
+            removeModalWindow();
         }
     };
 
