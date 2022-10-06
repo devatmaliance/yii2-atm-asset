@@ -29,10 +29,15 @@ $(function() {
     };
 
     let setup = function() {
+        $(document).on(event.click, selector.modalWindowLink, stopProcess);
         $(document).on(event.click, selector.modalWindowLink, createModalWindow);
         $(document).on(event.click, selector.modalWindowLink, $.throttle(2000, showModalWindow));
         $(document).on(event.hideBsModal, selector.modalWindow, removeModalWindow);
     };
+
+    let stopProcess = function() {
+        return false;
+    }
 
     let createModalWindow = function() {
         try {
@@ -48,7 +53,7 @@ $(function() {
                 '        <button id="' + selector.modalWindowCloseBtn.substring(1) + '" type="button" class="close" data-dismiss="modal" aria-label="Close">' +
                 '          <span aria-hidden="true">&times;</span>' +
                 '        </button>' +
-                '        <h4 id="' + selector.modelWindowTitle.substring(1) + '" class="modal-title">' + ($(this).data('modal-title') ?? '') + '</h4>' +
+                '        <h4 id="' + selector.modelWindowTitle.substring(1) + '" class="modal-title">' + ($(this).attr('data-modal-title') ?? '') + '</h4>' +
                 '      </div>' +
                 '      <div id="' + selector.modalWindowBody.substring(1) + '" class="modal-body">' +
                 '      </div>' +
@@ -78,14 +83,14 @@ $(function() {
     let showModalWindow = async function() {
         try {
             let form = await $.ajax({
-                url: $(this).data('modal-url'),
+                url: $(this).attr('href') ?? $(this).attr('data-modal-url'),
                 dataType: 'json',
                 type: 'GET',
                 headers: {
                     'Access-Control-Allow-Origin': '*',
                     'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                data: $(this).data('modal-attributes') ?? {},
+                data: $(this).attr('data-modal-attributes') ?? {},
             });
 
             $(selector.modalWindowBody).empty();
