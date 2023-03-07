@@ -37,7 +37,7 @@ $(function() {
 
     let stopProcess = function() {
         return false;
-    }
+    };
 
     let createModalWindow = function() {
         try {
@@ -45,21 +45,43 @@ $(function() {
                 return;
             }
 
-            let modalForm =
-                '<div id="' + selector.modalWindow.substring(1) + '" class="modal fade" tabindex="-1" role="dialog">' +
-                '  <div class="modal-dialog" role="document">' +
-                '    <div id="' + selector.modalWindowContent.substring(1) + '" class="modal-content">' +
-                '      <div id="' + selector.modelWindowHeader.substring(1) + '" class="modal-header">' +
-                '        <button id="' + selector.modalWindowCloseBtn.substring(1) + '" type="button" class="close" data-dismiss="modal" aria-label="Close">' +
-                '          <span aria-hidden="true">&times;</span>' +
-                '        </button>' +
-                '        <h4 id="' + selector.modelWindowTitle.substring(1) + '" class="modal-title">' + ($(this).attr('data-modal-title') ?? '') + '</h4>' +
-                '      </div>' +
-                '      <div id="' + selector.modalWindowBody.substring(1) + '" class="modal-body">' +
-                '      </div>' +
-                '    </div>' +
-                '  </div>' +
-                '</div>';
+            let bsVersion = $(this).attr('data-bs-version') ?? 3;
+
+            let modalForm;
+
+            if (bsVersion >= 4) {
+                modalForm =
+                    '<div id="' + selector.modalWindow.substring(1) + '" class="modal fade" tabindex="-1" role="dialog">' +
+                    '  <div class="modal-dialog" role="document">' +
+                    '    <div id="' + selector.modalWindowContent.substring(1) + '" class="modal-content">' +
+                    '      <div id="' + selector.modelWindowHeader.substring(1) + '" class="modal-header">' +
+                    '        <h4 id="' + selector.modelWindowTitle.substring(1) + '" class="modal-title">' + ($(this).attr('data-modal-title') ?? '') + '</h4>' +
+                    '        <button id="' + selector.modalWindowCloseBtn.substring(1) + '" type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                    '          <span aria-hidden="true">&times;</span>' +
+                    '        </button>' +
+                    '      </div>' +
+                    '      <div id="' + selector.modalWindowBody.substring(1) + '" class="modal-body">' +
+                    '      </div>' +
+                    '    </div>' +
+                    '  </div>' +
+                    '</div>';
+            } else {
+                modalForm =
+                    '<div id="' + selector.modalWindow.substring(1) + '" class="modal fade" tabindex="-1" role="dialog">' +
+                    '  <div class="modal-dialog" role="document">' +
+                    '    <div id="' + selector.modalWindowContent.substring(1) + '" class="modal-content">' +
+                    '      <div id="' + selector.modelWindowHeader.substring(1) + '" class="modal-header">' +
+                    '        <button id="' + selector.modalWindowCloseBtn.substring(1) + '" type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+                    '          <span aria-hidden="true">&times;</span>' +
+                    '        </button>' +
+                    '        <h4 id="' + selector.modelWindowTitle.substring(1) + '" class="modal-title">' + ($(this).attr('data-modal-title') ?? '') + '</h4>' +
+                    '      </div>' +
+                    '      <div id="' + selector.modalWindowBody.substring(1) + '" class="modal-body">' +
+                    '      </div>' +
+                    '    </div>' +
+                    '  </div>' +
+                    '</div>';
+            }
 
             $(selector.body).append(modalForm);
         } catch (error) {
